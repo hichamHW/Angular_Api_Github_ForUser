@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" name="" id="" (keyup)="search()" class="form-control text-center" [(ngModel)]="Search" placeholder="Search" aria-describedby="helpId">
+        </div>
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>UserName</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of Data2">
+                        <td scope="row">{{user.id}}</td>
+                        <td>{{user.login}}</td>
+                        <td>
+
+                            <a name="" id="" class="btn btn-primary" [routerLink]="['/info',user.login]" role="button">Show info</a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</div>
